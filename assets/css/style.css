@@ -11,28 +11,24 @@ body {
 
 h1 {
     text-align: center;
-    margin: 5vh 0;
+    margin: 3vh 0;
+    font-size: 4rem;
 }
 
-.game-area {
-    height: 440px;
-    width: 880px;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: .2em;
+    width: 600px;
+    height: 600px;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
 }
-
+  
 .card {
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    position: relative;
-}
-
-.front-card, .back-card {
-    width: 200px;
-    height: 200px;
-    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../images/back-card-face.jpg') center center no-repeat;
+    background-size: 150px 150px;
 }
 
 .card:active {
@@ -40,7 +36,7 @@ h1 {
 }
 
 footer {
-    margin-top: 5vh;
+    margin-top: 2vh;
     text-align: center;
 }
 
