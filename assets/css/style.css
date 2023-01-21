@@ -4,7 +4,48 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: bisque;
+    opacity: 0.8;
+}
+
+h1 {
+    text-align: center;
+    margin: 5vh 0;
+}
+
 img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+}
+
+.game-area {
+    height: 440px;
+    width: 880px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+footer {
+    margin-top: 5vh;
+    text-align: center;
+}
+
+footer p {
+    font-size: 2rem;    
+}
+
+footer ol {
+    margin-top: 2vh
+}
+
+footer li {
+    font-size: 1.4rem;
 }
