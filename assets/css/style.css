@@ -14,11 +14,6 @@ h1 {
     margin: 5vh 0;
 }
 
-img {
-    width: 200px;
-    height: 200px;
-}
-
 .game-area {
     height: 440px;
     width: 880px;
@@ -31,6 +26,17 @@ img {
     width: 200px;
     height: 200px;
     margin: 10px;
+    position: relative;
+}
+
+.front-card, .back-card {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+.card:active {
+    transform: scale(0.95);
 }
 
 footer {
@@ -39,11 +45,11 @@ footer {
 }
 
 footer p {
-    font-size: 2rem;    
+    font-size: 2rem;
 }
 
 footer ol {
-    margin-top: 2vh
+    margin-top: 2vh;
 }
 
 footer li {
