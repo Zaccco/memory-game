@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
+// Global variables
 let alreadyFlipped = false;
 let first;
 let second;
@@ -42,9 +43,10 @@ function checkIfMatch() {
     if (first.dataset.name === second.dataset.name) {
         // if it matches
         removeMatchingPair();
+        first = null;
+        second = null;
     } else {
         // not a match
-        // https://www.w3schools.com/jsref/met_win_settimeout.asp
         // Sets a 1 second delay after the second card is incorrect and turns them back over
         setTimeout(function() {
             first.classList.remove("reveal");
@@ -60,11 +62,24 @@ function removeMatchingPair() {
     
 }
 
-function randomizeOrder() {
+/**
+ * Check if all the pairs have been found
+ */
+function checkIfGameWon() {
 
 }
 
+(function randomizeOrder() {
+    cards.forEach(card => {
+        let randomPosition = Math.floor(Math.random() * 8);
+        card.style.order = randomPosition;
+    });
+})();
+
+/**
+ * Restart the game by display a visible button that let's the user reload the page and play again
+ */
 function restartGame() {
-    
+
 }
 
