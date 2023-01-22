@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let card of cards) {
         card.addEventListener("click", revealCard);
     }
+
+    randomizeOrder();
 })
 
 // Global variables
@@ -42,7 +44,8 @@ function revealCard() {
 function checkIfMatch() {
     if (first.dataset.name === second.dataset.name) {
         // if it matches
-        removeMatchingPair();
+        // removeMatchingPair();
+
         first = null;
         second = null;
     } else {
@@ -66,15 +69,21 @@ function removeMatchingPair() {
  * Check if all the pairs have been found
  */
 function checkIfGameWon() {
-
+    let revealedCards = document.getElementsByClassName("reveal");
+    if (revealedCards.length = 8) {
+        alert("You won!");
+    }
 }
 
-(function randomizeOrder() {
+/**
+ * Shuffles the cards into a random position
+ */
+function randomizeOrder() {
     cards.forEach(card => {
         let randomPosition = Math.floor(Math.random() * 8);
         card.style.order = randomPosition;
     });
-})();
+};
 
 /**
  * Restart the game by display a visible button that let's the user reload the page and play again
