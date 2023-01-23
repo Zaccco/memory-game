@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let card of cards) {
         card.addEventListener("click", revealCard);
     }
-
-    randomizeOrder();
 })
 
 // Global variables
@@ -61,9 +59,9 @@ function checkIfMatch() {
 /**
  * An idea that when two cards are matched they get removed from the board, possible future implementation
  */
-function removeMatchingPair() {
+// function removeMatchingPair() {
     
-}
+// }
 
 /**
  * Check if all the pairs have been found
@@ -91,4 +89,12 @@ function randomizeOrder() {
 function restartGame() {
 
 }
+
+// Take the html into javascript, create an array with the images and the html
+
+// Randomize the order by itterating over the array
+
+// Create a variable called totalMatches that increments by 1 every time a match is found. And then check if totalMatches is 4 and then the game is won and reload the page.
+
+// window.location.reload
 
