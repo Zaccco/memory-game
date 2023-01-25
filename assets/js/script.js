@@ -54,7 +54,7 @@ function checkIfMatch() {
             }, 200);
             setTimeout(function() {
                 window.location.reload();
-            }, 3000);
+            }, 200);
         }
     } else {
         // not a match
@@ -63,7 +63,7 @@ function checkIfMatch() {
         setTimeout(function() {
             first.classList.remove("reveal");
             second.classList.remove("reveal");
-        }, 1000);
+        }, 600);
     }
 }
 
