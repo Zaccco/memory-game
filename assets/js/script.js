@@ -15,15 +15,12 @@ let first;
 let second;
 let totalMatches = 0;
 
-
 /**
  * Reveals the card when clicked and also checks if it's the first or the second card revealed
  */
 function revealCard() {
     // If the same card is clicked twice it will just return instead of continuing the function
-    if (this === first) {
-        return;
-    }
+    if (this === first) return;
 
     this.classList.add('reveal');
 
@@ -61,6 +58,7 @@ function checkIfMatch() {
         }
     } else {
         // not a match
+
         // Sets a 1 second delay after the second card is incorrect and turns them back over
         setTimeout(function() {
             first.classList.remove("reveal");
