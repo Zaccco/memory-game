@@ -1,16 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    cards = document.getElementsByClassName("card");
+    const cards = document.getElementsByClassName("card");
 
     for (let card of cards) {
         card.addEventListener("click", revealCard);
     }
+
+    shuffle();
 })
 
 // Global variables
 let alreadyFlipped = false;
 let first;
 let second;
+let totalMatches = 0;
+
 
 /**
  * Reveals the card when clicked and also checks if it's the first or the second card revealed
@@ -42,10 +46,19 @@ function revealCard() {
 function checkIfMatch() {
     if (first.dataset.name === second.dataset.name) {
         // if it matches
-        // removeMatchingPair();
-
         first = null;
         second = null;
+        ++totalMatches;
+
+        // Check if the game is won
+        if(totalMatches === 4) {
+            setTimeout(function() {
+                alert('You won the game, Congratulations!');
+            }, 200);
+            setTimeout(function() {
+                window.location.reload();
+            }, 3000);
+        }
     } else {
         // not a match
         // Sets a 1 second delay after the second card is incorrect and turns them back over
@@ -57,44 +70,16 @@ function checkIfMatch() {
 }
 
 /**
- * An idea that when two cards are matched they get removed from the board, possible future implementation
- */
-// function removeMatchingPair() {
-    
-// }
-
-/**
- * Check if all the pairs have been found
- */
-function checkIfGameWon() {
-    let revealedCards = document.getElementsByClassName("reveal");
-    if (revealedCards.length = 8) {
-        alert("You won!");
-    }
-}
-
-/**
  * Shuffles the cards into a random position
  */
-function randomizeOrder() {
-    cards.forEach(card => {
-        let randomPosition = Math.floor(Math.random() * 8);
-        card.style.order = randomPosition;
-    });
-};
-
-/**
- * Restart the game by display a visible button that let's the user reload the page and play again
- */
-function restartGame() {
-
+function shuffle() {
+    document.getElementById("dog1").style.order = Math.floor(Math.random() * 8);
+    document.getElementById("dog2").style.order = Math.floor(Math.random() * 8);
+    document.getElementById("cat1").style.order = Math.floor(Math.random() * 8);
+    document.getElementById("cat2").style.order = Math.floor(Math.random() * 8);
+    document.getElementById("bunny1").style.order = Math.floor(Math.random() * 8);
+    document.getElementById("bunny2").style.order = Math.floor(Math.random() * 8);
+    document.getElementById("tiger1").style.order = Math.floor(Math.random() * 8);
+    document.getElementById("tiger2").style.order = Math.floor(Math.random() * 8);
 }
-
-// Take the html into javascript, create an array with the images and the html
-
-// Randomize the order by itterating over the array
-
-// Create a variable called totalMatches that increments by 1 every time a match is found. And then check if totalMatches is 4 and then the game is won and reload the page.
-
-// window.location.reload
 
