@@ -22,6 +22,7 @@ function revealCard() {
     // If the same card is clicked twice it will just return instead of continuing the function
     if (this === first) return;
 
+    // Adds a "reveal" class to whatever card is being clicked
     this.classList.add('reveal');
 
     if (!alreadyFlipped) {
