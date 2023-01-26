@@ -58,7 +58,6 @@ function checkIfMatch() {
         }
     } else {
         // not a match
-
         // Sets a 1 second delay after the second card is incorrect and turns them back over
         setTimeout(function() {
             first.classList.remove("reveal");

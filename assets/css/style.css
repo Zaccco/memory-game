@@ -69,42 +69,53 @@ footer ol {
 
 footer li {
     font-size: 1.2rem;
+    line-height: 24px;
 }
 
 /* Media queries */
 
-@media (min-width: 1281px) {
-  
-    /* CSS */
-    
-  }
 
-  @media (min-width: 1025px) and (max-width: 1280px) {
-  
-    /* CSS */
-    
-  }
+@media (min-width: 481px) and (max-width: 767px) {
 
-  @media (min-width: 768px) and (max-width: 1024px) {
-  
-    /* CSS */
-    
-  }
+    .grid-container {
+        width: 440px;
+        height: 270px;
+    }
 
-  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
-    /* CSS */
-    
-  }
+    .card {
+        height: 125px;
+        width: 100px;
+    }
 
-  @media (min-width: 481px) and (max-width: 767px) {
-  
-    /* CSS */
+    footer li {
+        font-size: .75rem;
+    }
     
-  }
+}
 
-  @media (min-width: 320px) and (max-width: 480px) {
-  
-    /* CSS */
+@media (min-width: 320px) and (max-width: 480px) {
     
-  }
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .grid-container {
+        width: 320px;
+        height: 270px;
+    }
+
+    .card {
+        height: 125px;
+        width: 70px;
+    }
+
+    footer p {
+        font-size: 1.2rem;
+    }
+
+    footer li {
+        font-size: 1rem;
+        line-height: 40px;
+    }
+    
+}
