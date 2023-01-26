@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     shuffle();
-})
+});
 
 // Global variables
 let alreadyFlipped = false;
