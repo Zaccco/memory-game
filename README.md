@@ -11,7 +11,7 @@ When the page is loaded the cards will be shuffled into a random order and there
 This project consists of only a single page where a user-friendly game of Memory is playable along with some basic instructions on how to play the game.
 
 * Game area
-
+    * At the top you will see the header displaying the title "Memory Game".
     * At the center of the page you will find the 8 cards with a backface shown until you click to reveal what frontface image is set behind the backface. 
     * This is where the user will play the memory game
 
