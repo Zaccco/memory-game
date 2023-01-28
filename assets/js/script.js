@@ -6,7 +6,21 @@ document.addEventListener("DOMContentLoaded", function() {
         card.addEventListener("click", revealCard);
     }
 
-    shuffle();
+    const animals = [
+        'dog1',
+        'dog2',
+        'cat1',
+        'cat2',
+        'bunny1',
+        'bunny2',
+        'tiger1',
+        'tiger2'
+    ]
+    
+    
+    for (let animal in animals) {
+        document.getElementById(animal).style.order = Math.floor(Math.random() * 8);
+    }
 });
 
 // Global variables
@@ -65,19 +79,5 @@ function checkIfMatch() {
             second.classList.remove("reveal");
         }, 600);
     }
-}
-
-/**
- * Shuffles the cards into a random position
- */
-function shuffle() {
-    document.getElementById("dog1").style.order = Math.floor(Math.random() * 8);
-    document.getElementById("dog2").style.order = Math.floor(Math.random() * 8);
-    document.getElementById("cat1").style.order = Math.floor(Math.random() * 8);
-    document.getElementById("cat2").style.order = Math.floor(Math.random() * 8);
-    document.getElementById("bunny1").style.order = Math.floor(Math.random() * 8);
-    document.getElementById("bunny2").style.order = Math.floor(Math.random() * 8);
-    document.getElementById("tiger1").style.order = Math.floor(Math.random() * 8);
-    document.getElementById("tiger2").style.order = Math.floor(Math.random() * 8);
 }
 
